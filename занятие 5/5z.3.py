@@ -1,4 +1,4 @@
-N = int(input())
+N = int(input('Введите число:'))
 dvoika = 2
 step = 1
 while dvoika <= N:
