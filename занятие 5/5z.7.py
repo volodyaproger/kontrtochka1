@@ -1,4 +1,4 @@
-pred = int(input())
+pred = int(input('Введите число:'))
 ans = 0
 while pred != 0:
     next = int(input())
