@@ -1,6 +1,6 @@
 summa = 0
 len = 0
-number = int(input())
+number = int(input('Введите число:'))
 while number != 0:
     summa += number
     len += 1
