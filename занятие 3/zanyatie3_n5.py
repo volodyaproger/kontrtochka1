@@ -1,6 +1,6 @@
-a = int(input())
-b = int(input())
-c = int(input())
+a = int(input('Введите число:'))
+b = int(input('Введите число:'))
+c = int(input('Введите число:'))
 min = 0
 if a < b:
     if a < c:
