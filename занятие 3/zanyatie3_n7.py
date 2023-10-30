@@ -1,5 +1,8 @@
-year = int(input('Введите число:'))
-if (year % 4 == 0 and year%100 != 0) or (year%400 == 0):
-    print("Год високосный")
-else:
-    print("Год обычный")
+def F(year):
+    if year % 4 == 0 and year % 100 != 0 and year % 400 != 0:
+        print('ДA')
+    else:
+        print('НET')
+
+year = int(input())
+F(year)
