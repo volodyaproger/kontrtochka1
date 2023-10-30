@@ -1,8 +1,12 @@
-n = int(input("Введите натуральное число меньше девяти"))
-if 1 <= n <= 9:
-    for a in range(1, n + 1):
-        for b in range(1, a + 1):
-            print(b, end="")
-        print()
-else:
-    print("Ошибка")
+def F(n):
+    if 1 <= n <= 9:
+        for i in range(1, n + 1):
+            for j in range(1, i + 1):
+                print(j, end="")
+            print()  
+    else:
+        print("Ошибка")
+
+n = int(input())
+
+F(n)
