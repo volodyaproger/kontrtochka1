@@ -1,4 +1,12 @@
-A = int(input('Введите число:'))
-B = int(input('Введите число:'))
-for i in range(A - (A + 1) % 2, B - B % 2, 2):
-    print(i)
+def F(a, b):
+    if a > b:
+        for i in range(a, b - 1, -1):
+            if i % 2 != 0:
+                print(i)
+            else:
+                print("a должно быть больше b")
+
+a = int(input())
+b = int(input())
+
+F(a, b)
