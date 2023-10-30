@@ -1,5 +1,9 @@
-n = int(input("Введите число:"))
-otvet = 1
-for a in range(1, n +1):
-    otvet *= a
-print(otvet)
+def F(n):
+    a = 1
+    for i in range(1, n + 1):
+        a *= i
+    print(a)
+
+n = int(input())
+
+F(n)
