@@ -1,5 +1,10 @@
-N = int(input('Введите число:'))
-summa = 0
-for a in range(N):
-    summa += int(input())
-print(summa)
+def F(n):
+    total = 0
+    for i in range(N):
+        num = int(input())
+        total += num
+        print(total)
+
+N = int(input())
+
+F(N)
