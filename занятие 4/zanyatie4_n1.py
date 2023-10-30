@@ -1,5 +1,11 @@
-A = int(input('Введите число:'))
-B = int(input('Введите число:'))
-if A < B:
-    for num in range(A, B + 1):
-        print(num)
+def F(a, b):
+  if a <= b:
+    for i in range(a, b + 1):
+        print(i)
+    else:
+        print("a должно быть меньше или равно b")
+
+a = int(input())
+b = int(input())
+
+F(a, b)
