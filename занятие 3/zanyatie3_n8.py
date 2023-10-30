@@ -1,9 +1,13 @@
-a = int(input('Введите число:'))
-b = int(input('Введите число:'))
-c = int(input('Введите число:'))
-if a == b == c:
-    print("3")
-if (a == b and a != c) or (b == c and  b != a) or (a == c and b != c):
-    print("2")
-if a != b != c:
-    print("0")
+def F(a, b, c):
+    if a == b and a == c and c == b:
+        print('3')
+    elif (a == b and a == c) or (b == a and b == c) or (c == a and c == b):
+        print('2')
+    else:
+        print('0')
+
+a = input()
+b = input()
+c = input()
+
+F(a, b, c)
