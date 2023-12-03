@@ -12,14 +12,14 @@ def restore_matrix(arr):
 
 
 def write_matrix_to_file(matrix, filename):
-    with open(filename, 'w') as file:
+    with open("Канакин_У-234_vivod.txt", 'w') as file:
         for row in matrix:
             file.write(' '.join(map(str, row)) + '\n')
 
 
 def read_matrix_from_file(filename):
     matrix = []
-    with open(filename, 'r') as file:
+    with open("Канакин_У-234_vvod.txt", 'r') as file:
         for line in file:
             row = list(map(str, line.split()))
             matrix.append(row)
@@ -27,7 +27,7 @@ def read_matrix_from_file(filename):
 
 
 input_file = "Канакин_У-234_vvod.txt"
-output_file = "Канакин_У-234_vivod1.txt"
+output_file = "Канакин_У-234_vivod.txt"
 
 arr = read_matrix_from_file(input_file)
 matrix = restore_matrix(arr)
