@@ -1,0 +1,53 @@
+def read_matrix_from_file(file_path):
+    matrix = []
+    with open("Канакин_У-234_vvod.txt", 'r') as file:
+        for line in file:
+            row = [float(value) for value in line.split()]
+            matrix.append(row)
+    return matrix
+
+def write_matrix_to_file(file_path, matrix):
+    with open("Канакин_У-234_vivod2.txt", 'w') as file:
+        for row in matrix:
+            line = ' '.join(map(str, row)) + '\n'
+            file.write(line)
+
+def extract_diagonal_elements(matrix):
+    return [matrix[i][i] for i in range(len(matrix))]
+
+def calculate_trace(matrix):
+    return sum(extract_diagonal_elements(matrix))
+
+def transform_matrix(matrix, value):
+    for i in range(len(matrix)):
+        if i % 2 == 0:
+            for j in range(len(matrix[i])):
+                matrix[i][j] /= value
+    return matrix
+
+def restore_matrix(transformed_matrix, diagonal_elements):
+    for i in range(len(transformed_matrix)):
+        for j in range(len(transformed_matrix[i])):
+            if i == j:
+                transformed_matrix[i][j] = diagonal_elements[i]
+    return transformed_matrix
+
+file_path_input = "Канакин_У-234_vvod.txt"
+file_path_output = "Канакин_У-234_vivod2.txt"
+
+original_matrix = read_matrix_from_file(file_path_input)
+
+diagonal_elements = extract_diagonal_elements(original_matrix)
+
+trace_value = calculate_trace(original_matrix)
+
+transformed_matrix = transform_matrix(original_matrix.copy(), trace_value)
+
+restored_matrix = restore_matrix(transformed_matrix, diagonal_elements)
+
+write_matrix_to_file(file_path_output, restored_matrix)
+transformed_matrix = transform_matrix(original_matrix.copy(), trace_value)
+
+restored_matrix = restore_matrix(transformed_matrix, diagonal_elements)
+
+write_matrix_to_file(file_path_output, restored_matrix)
