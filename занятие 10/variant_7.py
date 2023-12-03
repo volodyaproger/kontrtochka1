@@ -27,7 +27,7 @@ def read_matrix_from_file(filename):
 
 
 input_file = "Канакин_У-234_vvod.txt"
-output_file = "Канакин_У-234_vivod.txt"
+output_file = "Канакин_У-234_vivod1.txt"
 
 arr = read_matrix_from_file(input_file)
 matrix = restore_matrix(arr)
